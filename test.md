@@ -32,38 +32,13 @@ Comments are appreciated ;-)
 
 
 1. User is coming from an Off-White promotion offer link, display only the Off-White's products with a reduced price of 10%.	
-	
-
-
 
 2. Louis Vuitton doesn't want us to display the name of their brand on our website, could you reverse the name of the brand for each LV product to obfuscate their name ?
 
 3. I'm a user from UK and I want to see product between 1500€ and 500€, ordered from the cheaper to the most expensive that are shippable to my country.
 
 4. We want to display how many days/month/year since each products has been deposited on the website (ie: Deposited 1month and 3days ago)
-We can use moment precise range plugin in our app
-In Our html File add <p>{{calculateDiff(listing.deposited_on)}}</p> 
 
-sample code:
-<div class = "content-box">
-    <a routerLink = "/listings">
-    <button> BACK </button>
-    </a>
-    <h2> {{listing.name}}</h2>
-    <p> {{listing.brand}}</p>
-    <p> ${{listing.price.price}}</p>
-    <p>{{listing.deposited_on}}</p>
-    <p>{{calculateDiff(listing.deposited_on)}}</p>
-</div>
-  
-In ts file add function call passing current date parameter
-
-calculateDiff(data){
-    let date = new Date(data);
-    let currentDate = new Date();
-    var diff =  moment.preciseDiff(date, currentDate, true); // here we make use of preciseDiff()
-    return ( diff.months+ "Months " + diff.days + "Days Ago");
-  }
 
 ## II - Questions
 
